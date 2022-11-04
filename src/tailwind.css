@@ -9,8 +9,20 @@
     html,
     body {
         font-family: "Open Sans", sans-serif;
-        @apply antialiased
+        @apply antialiased bg-gray-50;
     }
 
-
 }
+
+.flags-select{
+    @apply !pb-0
+}
+
+
+.flags-select button {
+    @apply h-14 border-2 bg-white rounded border-gray-200 text-sm hover:border-primary-brand-color transition-colors
+}
+.flags-select button > span span:nth-child(2){
+    @apply text-sm pl-2
+}
+
