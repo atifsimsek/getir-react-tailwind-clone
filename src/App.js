@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import MobileApp from "./Components/MobileApp";
 import Section from "./Components/Section";
 import Card from "./Components/Card";
+import Footer from "./Components/ui/Footer";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <MobileApp />
         <Card/>
       </div>
+      <Footer/>
     </div>
   );
 }
