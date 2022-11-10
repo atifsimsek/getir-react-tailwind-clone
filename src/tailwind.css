@@ -26,3 +26,6 @@
     @apply text-sm pl-2
 }
 
+.container{
+    width: 83%;
+}

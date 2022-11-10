@@ -8,10 +8,10 @@ import { MdArrowForwardIos } from "react-icons/md"
 import { MdArrowBackIos } from "react-icons/md"
 
 
-function NextBtn({onClick }) {
+function NextBtn({ onClick }) {
     return (
         <button className="text-brand-color absolute top-1/2 -right-6 -translate-y-1/2" onClick={onClick}>
-            <MdArrowForwardIos size={22}/>
+            <MdArrowForwardIos size={22} />
         </button>
 
 
@@ -43,11 +43,34 @@ const Campaigns = () => {
         autoplaySpeed: 3500,
         arrows: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         cssEase: "linear",
         nextArrow: <NextBtn />,
-        prevArrow: <PrevBtn />
+        prevArrow: <PrevBtn />,
+        responsive: [
+            {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: true
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false
+                }
+            },
+        ]
     };
 
     useEffect(() => {
@@ -56,7 +79,7 @@ const Campaigns = () => {
 
 
     return (
-        <div className=' mt-8 container mx-auto w-10/12 '>
+        <div className=' mt-8 container mx-auto'>
             <Title title="Kampanyalar" />
 
             <Slider className='-mx-2' {...settings}>

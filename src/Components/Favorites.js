@@ -10,9 +10,9 @@ const Favorites = () => {
     setProducts(productsData)
   }, [])
   return (
-    <div className='mt-8 container mx-auto w-10/12 rounded-lg'>
+    <div className='mt-8 container mx-auto  rounded-lg'>
       <Title title="Favoriler" />
-      <div className='grid grid-cols-8 gap-px rounded-lg overflow-hidden '>
+      <div className='grid grid-cols-3 2xl:grid-cols-9 xl:grid-cols-8 lg:grid-cols-6 sm:grid-cols-4 gap-px rounded-lg overflow-hidden '>
         {
           products.map(product => (
             <ProductItem key={product.id} product={product} />

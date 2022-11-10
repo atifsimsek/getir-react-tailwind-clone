@@ -9,16 +9,16 @@ const Categories = () => {
 
     useEffect(() => {
 
-    
+
         setCategories(data)
     }, [])
 
 
     return (
-        <div className='bg-white h-[308px] shadow-category-shadow '>
-            <div className='  bg-white py-5 container mx-auto w-10/12'>
-                <Title title="Kategoriler"/>
-                <div className='grid grid-cols-10 '>
+        <div className='bg-white shadow-category-shadow '>
+            <div className='  bg-white py-5 container mx-auto'>
+                <Title title="Kategoriler" />
+                <div className='grid grid-cols-4 2xl:grid-cols-12 xl:grid-cols-10 lg:grid-cols-8 md:grid-cols-6'>
                     {!categories.length && "Loading..."}
                     {categories.map((item) => (
                         <Category key={item.id} category={item} />
