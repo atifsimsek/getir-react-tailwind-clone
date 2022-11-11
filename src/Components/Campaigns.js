@@ -6,6 +6,8 @@ import bannersData from "../api/banners.json"
 import Title from "../Components/ui/Title"
 import { MdArrowForwardIos } from "react-icons/md"
 import { MdArrowBackIos } from "react-icons/md"
+import { useWindowWidth } from '@react-hook/window-size'
+
 
 
 function NextBtn({ onClick }) {
@@ -33,6 +35,8 @@ function PrevBtn({ onClick }) {
 
 
 const Campaigns = () => {
+
+    const windowWidth = useWindowWidth()
 
     const [banners, setBanners] = useState([]);
 
@@ -79,14 +83,16 @@ const Campaigns = () => {
 
 
     return (
-        <div className=' mt-8 container mx-auto'>
-            <Title title="Kampanyalar" />
+        <div className='md:container md:w-10/12 mx-auto md:mt-8  overflow-x-hidden'>
+            <div className='hidden md:block'>
+                <Title title="Kampanyalar" />
+            </div>
 
-            <Slider className='-mx-2' {...settings}>
+            <Slider className='md:-mx-2' {...settings}>
                 {banners.length && banners.map((banner) => (
                     <div key={banner.id}>
-                        <picture className='block px-2'>
-                            <img className='rounded-lg ' src={banner.image} alt="" />
+                        <picture className='block md:px-2'>
+                            <img className='md:rounded-lg ' src={banner.image} alt="" />
                         </picture>
                     </div>
                 ))}
