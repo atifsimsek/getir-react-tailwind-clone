@@ -25,9 +25,9 @@ const Card = () => {
 
 
     return (
-        <div className=' container mx-auto grid grid-cols-3 gap-x-4 '>
+        <div className=' w-full  md:container mx-auto md:w-10/12 grid md:grid-cols-2 lg:grid-cols-3 gap-4 '>
             {cards.map((card,index) => (
-                <div key={index} className='p-14 bg-white flex flex-col text-center items-center gap-y-4 shadow-sm border border-gray-50 rounded-lg'>
+                <div key={index} className='p-14 bg-white flex flex-col text-center items-center gap-y-4 shadow-sm border border-gray-50 md:rounded-lg'>
                     <img className=' h-[150px] w-[150px]' src={card.image} alt="" />
                     <h3 className='text-lg text-primary-brand-color font-semibold'>{card.title}</h3>
                     <p className='text-sm text-gray-700'>{card.description}</p>

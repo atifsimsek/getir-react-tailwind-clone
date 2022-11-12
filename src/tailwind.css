@@ -25,6 +25,9 @@
 .flags-select button > span span:nth-child(2){
     @apply text-sm pl-2
 }
+.ReactCollapse--collapse {
+    @apply transition-all
+  }
 
 .container{
     width: 83%;
