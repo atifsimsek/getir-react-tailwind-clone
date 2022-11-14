@@ -9,15 +9,13 @@ import Footer from "./Components/Footer";
 import { useWindowWidth } from '@react-hook/window-size'
 
 
-
-
 function App() {
   const WindowWidth = useWindowWidth()
   return (
-    <div>
+    <div className="relative">
       <Header />
       {WindowWidth < 768 && <Campaigns />}
-      <Section/>
+      <Section />
       <Categories />
       {WindowWidth > 768 && < Campaigns />}
       <div className="grid mx-auto gap-y-8">

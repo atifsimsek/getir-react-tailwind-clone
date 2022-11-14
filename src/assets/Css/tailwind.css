@@ -9,7 +9,8 @@
     html,
     body {
         font-family: "Open Sans", sans-serif;
-        @apply antialiased bg-gray-50;
+        @apply antialiased bg-gray-50 ;
+        
     }
 
 }
