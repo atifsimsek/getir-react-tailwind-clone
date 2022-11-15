@@ -7,10 +7,10 @@ const Modal = () => {
   const modals = useModals()
   return (
     <div>
-      {modals.map(modal => {
+      {modals.map((modal,index) => {
         const modalD = modalData.find(m => m.name === modal.name)
         return(
-         <modalD.element/>
+         <modalD.element key={index}/>
         )
       })}
     </div>
