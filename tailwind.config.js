@@ -5,7 +5,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", "/public/index.html"
   ],
-  
+
   theme: {
     extend: {
       colors: {
@@ -21,8 +21,6 @@ module.exports = {
         'mobile-background': "url('https://cdn.getir.com/getirweb-images/common/illustration/doodle.png')",
       },
       container: {
-
-
       }
     },
 

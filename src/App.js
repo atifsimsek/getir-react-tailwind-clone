@@ -12,7 +12,7 @@ import { useWindowWidth } from '@react-hook/window-size'
 function App() {
   const WindowWidth = useWindowWidth()
   return (
-    <div className="relative">
+    <div className="relative transform transition-all ">
       <Header />
       {WindowWidth < 768 && <Campaigns />}
       <Section />

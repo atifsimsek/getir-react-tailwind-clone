@@ -5,7 +5,7 @@ const modalSlice = createSlice({
 
     name: "modal",
     initialState: {
-        modals: []
+        modals: [],
     },
     reducers: {
         append: (state, action) => {
@@ -13,13 +13,11 @@ const modalSlice = createSlice({
 
         },
         destroy: state => {
-
-
-        },
-        destroyAll: state => {
+            document.body.style.overflow = "auto"
             state.modals = []
 
-        }
+        },
+
     },
 
 })
@@ -30,4 +28,4 @@ const modalSlice = createSlice({
 
 
 export const modalReducer = modalSlice.reducer
-export const {append,destroy,destroyAll} = modalSlice.actions
+export const { append, destroy} = modalSlice.actions
