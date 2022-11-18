@@ -10,7 +10,7 @@ const Footer = () => {
 
     const menus = [
         {
-            title: "Getir\'i Keşfedin",
+            title: "Getir'i Keşfedin",
             items: [
                 {
                     title: "Hakkımızda"

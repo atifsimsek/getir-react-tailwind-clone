@@ -6,7 +6,7 @@ import bannersData from "../api/banners.json"
 import Title from "../Components/ui/Title"
 import { MdArrowForwardIos } from "react-icons/md"
 import { MdArrowBackIos } from "react-icons/md"
-import { useWindowWidth } from '@react-hook/window-size'
+
 
 
 
@@ -36,7 +36,7 @@ function PrevBtn({ onClick }) {
 
 const Campaigns = () => {
 
-    const windowWidth = useWindowWidth()
+   
 
     const [banners, setBanners] = useState([]);
 

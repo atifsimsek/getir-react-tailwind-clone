@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { destroyModal } from "../utils/modalUtils"
 
+
 const OutsideClick = ({ modalRef, children }) => {
 
     useEffect(() => {
