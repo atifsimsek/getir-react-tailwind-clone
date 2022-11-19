@@ -39,7 +39,7 @@ console.log(language)
             </button>
             <button onClick={() => { openModal("register") }} className=' flex gap-x-2 text-white transition-all text-sm font-semibold opacity-80 hover:opacity-100 '>
               <HiUserAdd size={20} />
-              {language === "tr-TR" || language === "tr" ? "Üye Ol" : "Register"}
+              {language === "tr-TR" || language === "tr" ? "Kayıt Ol" : "Register"}
             </button>
           </nav>
 
