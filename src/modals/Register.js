@@ -78,7 +78,7 @@ const Register = () => {
                       value={values.phone}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className={`peer h-14 rounded px-3.5 border-2 ${errors.phone && touched.phone && "border-red-600 group-hover:border-red-600 focus:border-red-600 "}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2 `} />
+                      className={`peer h-14 rounded px-3.5 border-2 ${errors.phone && touched.phone && "!border-red-600 !group-hover:border-red-600 !focus:border-red-600 "}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2 `} />
                     {errors.phone && touched.phone ? (
                       <RiErrorWarningLine size={26} className='text-red-600 absolute top-3.5 right-4' />
                     ) : null}
@@ -98,7 +98,7 @@ const Register = () => {
                     value={values.nameSurname}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`peer h-14 rounded px-3.5 border-2 ${errors.nameSurname && touched.nameSurname && "border-red-600 group-hover:border-red-600 focus:border-red-600"}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none  focus:border-primary-brand-color text-sm pt-2`} />
+                    className={`peer h-14 rounded px-3.5 border-2 ${errors.nameSurname && touched.nameSurname && "!border-red-600 !group-hover:border-red-600 !focus:border-red-600"}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none  focus:border-primary-brand-color text-sm pt-2`} />
                   {errors.nameSurname && touched.nameSurname && (
                     <RiErrorWarningLine size={26} className='text-red-600 absolute top-3.5 right-4' />
                   )}
@@ -117,7 +117,7 @@ const Register = () => {
                     value={values.email}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`peer h-14 rounded px-3.5 border-2 ${errors.email && touched.email && "border-red-600 group-hover:border-red-600 focus:border-red-600"}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2`} />
+                    className={`peer h-14 rounded px-3.5 border-2 ${errors.email && touched.email && "!border-red-600 !group-hover:border-red-600 !focus:border-red-600"}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2`} />
                   {errors.email && touched.email && (
                     <RiErrorWarningLine size={26} className='text-red-600 absolute top-3.5 right-4' />
                   )}

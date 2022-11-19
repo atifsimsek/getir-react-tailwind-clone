@@ -100,7 +100,7 @@ const Section = () => {
                         value={values.phone}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        className={`peer h-14 rounded px-3.5 border-2 ${errors.phone && touched.phone && "border-red-600 group-hover:border-red-600 focus:border-red-600 "}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2 `} />
+                        className={`peer h-14 rounded px-3.5 border-2 ${errors.phone && touched.phone && "!border-red-600 !group-hover:border-red-600 !focus:border-red-600 !hover:border-red-600 "}  border-gray-200 w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color text-sm pt-2 `} />
                       {errors.phone && touched.phone ? (
                         <RiErrorWarningLine size={26} className='text-red-600 absolute top-3.5 right-4' />
                       ) : null}
@@ -108,9 +108,12 @@ const Section = () => {
                     </label>
                   </div>
                   {errors.phone && touched.phone && (
-                    <p className='text-red-600 flex ml-16 -mt-1  h-[15px] text-xs justify-center items-center '>
-                      {errors.phone}
-                    </p>
+                    <div className="flex">
+                      <p className="w-[115px]"></p>
+                      <p className='text-red-600 flex -mt-1  h-[15px] text-xs  items-center '>
+                        {errors.phone}
+                      </p>
+                    </div>
                   )}
                   <button type="submit" className="w-full h-12 flex items-center justify-center rounded-lg  bg-yellow-brand-color text-primary-brand-color text-sm px-3 py-4 font-semibold hover:text-yellow-brand-color hover:bg-primary-brand-color transition-colors  " >Telefon numarası ile devam et</button>
                   {/* <hr className="h-[1px] bg-gray-300 my-2" />

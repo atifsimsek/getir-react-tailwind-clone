@@ -1,9 +1,15 @@
 import Menu from './ui/Menu'
 import { BiGlobe } from "react-icons/bi"
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
-
+import { createModal } from '../utils/modalUtils'
 
 const Footer = () => {
+
+    const openModal = (name) => {
+        createModal(name)
+
+        document.body.style.overflow = "hidden"
+    }
 
 
 
@@ -127,10 +133,10 @@ const Footer = () => {
                             </a>
                         </div>
                         <div>
-                            <a className='h-8 flex transit bg-white md:bg-none shadow  md:shadow-none  items-center px-2 text-sm gap-x-2 rounded-md text-gray-500 border border-gray-150 transition-colors hover:bg-primary-brand-color hover:bg-opacity-10 hover:text-primary-brand-color hover:border-transparent' href="/">
+                            <button onClick={()=>{openModal("language")}} className='h-8 flex transit bg-white md:bg-none shadow  md:shadow-none  items-center px-2 text-sm gap-x-2 rounded-md text-gray-500 border border-gray-150 transition-colors hover:bg-primary-brand-color hover:bg-opacity-10 hover:text-primary-brand-color hover:border-transparent' href="/">
                                 <BiGlobe size={18} />
                                 Türkçe (TR)
-                            </a>
+                            </button>
                         </div>
                     </nav>
                 </div>
