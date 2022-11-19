@@ -4,16 +4,11 @@ import OutsideClick from '../utils/OutsideClick'
 import { CgClose } from "react-icons/cg"
 import { useState, useEffect, useRef } from 'react'
 
-
-
-
 const Language = () => {
   const modalRef = useRef()
   const language = useLanguage()
   const [isDisabled, setIsDisabled] = useState()
   const [value, setValue] = useState(language)
-
-  console.log("adsfasf" + isDisabled)
 
   useEffect(() => {
     setIsDisabled(!isDisabled)

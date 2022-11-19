@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import { useEffect } from 'react'
 import { BiGlobe } from "react-icons/bi"
 import { TiLocation } from "react-icons/ti"
 import { HiUser, HiUserAdd } from "react-icons/hi"
@@ -7,15 +7,18 @@ import { MdArrowForwardIos } from "react-icons/md"
 import { createModal, useLanguage, useModals } from "../utils/modalUtils"
 import Modal from "../modals"
 
+
 const Header = () => {
-  const language = useLanguage()
   const modals = useModals()
+  const language = useLanguage()
   const openModal = (name) => {
     createModal(name)
 
     document.body.style.overflow = "hidden"
-
   }
+
+
+console.log(language)
 
   return (
     <>
@@ -28,15 +31,15 @@ const Header = () => {
           <nav className=' hidden md:flex gap-x-8 '>
             <button onClick={() => { openModal("language") }} className=' flex gap-x-2 text-white transition-all text-sm font-semibold opacity-80 hover:opacity-100 '>
               <BiGlobe size={20} />
-              {language === "tr" ? "Türkçe" : "English"}
+              {language === "tr-TR" || language === "tr" ? "Türkçe" : "English"}
             </button>
             <button onClick={() => { openModal("login") }} className='cursor-pointer flex gap-x-2 text-white transition-all text-sm font-semibold opacity-80 hover:opacity-100 '>
               <HiUser size={20} />
-              {language === "tr" ? "Giriş Yap" : "Login"}
+              {language === "tr-TR" || language === "tr" ? "Giriş Yap" : "Login"}
             </button>
             <button onClick={() => { openModal("register") }} className=' flex gap-x-2 text-white transition-all text-sm font-semibold opacity-80 hover:opacity-100 '>
               <HiUserAdd size={20} />
-              {language === "tr" ? "Üye Ol" : "Register"}
+              {language === "tr-TR" || language === "tr" ? "Üye Ol" : "Register"}
             </button>
           </nav>
 
