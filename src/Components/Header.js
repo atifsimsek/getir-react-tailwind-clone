@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { useEffect } from 'react'
 import { BiGlobe } from "react-icons/bi"
 import { TiLocation } from "react-icons/ti"
 import { HiUser, HiUserAdd } from "react-icons/hi"
@@ -16,9 +15,6 @@ const Header = () => {
 
     document.body.style.overflow = "hidden"
   }
-
-
-console.log(language)
 
   return (
     <>
